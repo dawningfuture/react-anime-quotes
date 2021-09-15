@@ -1,0 +1,9 @@
+td {
+  padding: 10px;
+}
+
+.anime {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
