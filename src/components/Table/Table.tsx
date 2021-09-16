@@ -1,14 +1,20 @@
 import React from "react";
+import RbTable from "react-bootstrap/Table";
 import "./table.css";
+
+interface TableRow {
+  data: any[];
+  onClick?: () => void;
+}
 
 interface TableProps {
   headers: string[];
-  data: any[][];
+  rows: TableRow[];
 }
 
 export default function Table(props: TableProps) {
   return (
-    <table>
+    <RbTable>
       <thead>
         <tr>
           {props.headers.map((header) => (
@@ -17,14 +23,14 @@ export default function Table(props: TableProps) {
         </tr>
       </thead>
       <tbody>
-        {props.data.map((row, i) => (
+        {props.rows.map((row, i) => (
           <tr key={i}>
-            {row.map((data, j) => (
-              <td key={j}>{data}</td>
+            {row.data.map((datum, j) => (
+              <td key={j}>{datum}</td>
             ))}
           </tr>
         ))}
       </tbody>
-    </table>
+    </RbTable>
   );
 }

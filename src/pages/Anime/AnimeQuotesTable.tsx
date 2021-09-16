@@ -6,9 +6,11 @@ interface AnimeQuotesProps {
   quotes: Quote[];
 }
 
-export default function AnimeQuotes(props: AnimeQuotesProps) {
+export function AnimeQuotesTable(props: AnimeQuotesProps) {
   const headers = ["Character", "Quote"];
-  const data = props.quotes.map((quote) => [quote.character, quote.quote]);
+  const data = props.quotes.map((quote) => ({
+    data: [quote.character, quote.quote],
+  }));
 
-  return <Table headers={headers} data={data} />;
+  return <Table headers={headers} rows={data} />;
 }

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Page } from "../../components/Page/Page";
 import { Quote } from "../../models/Quote";
 import { http } from "../../services/Http";
-import RandomQuotes from "./RandomQuotes";
+import { RandomQuotesTable } from "./RandomQuotesTable";
 
 interface HomePageState {
   quotes: Quote[];
@@ -24,5 +25,9 @@ export default function HomePage() {
     );
   }, []);
 
-  return error ? <h2>{error}</h2> : <RandomQuotes quotes={quotes} />;
+  return (
+    <Page>
+      {error ? <h2>{error}</h2> : <RandomQuotesTable quotes={quotes} />}
+    </Page>
+  );
 }
