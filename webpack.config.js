@@ -3,9 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./src/App.tsx",
   mode: "production",
   devtool: "source-map",
+  devServer: {
+    port: 3000,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
@@ -33,6 +37,7 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html",
       favicon: "./src/favicon.ico",
+      publicPath: "/",
     }),
     new MiniCssExtractPlugin(),
   ],
