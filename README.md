@@ -68,3 +68,7 @@ As I was developing this practice project, I noticed some antipatterns that ende
   - Made `HomePage` and `AnimePage` function components so that I can use hookes (such as the `useParams` hook from `react-router-dom`)
 
 - Resolved `Index` (now `App`) from needing a root `<div>`
+
+### `attempt-3`: refactored tables
+
+- Created a reusable `Table` component that allows me to DRY out the code

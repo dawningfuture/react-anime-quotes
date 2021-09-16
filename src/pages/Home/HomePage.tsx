@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import RandomQuotes from "../components/RandomQuotes/RandomQuotes";
-import { Quote } from "../models/Quote";
-import { http } from "../services/Http";
+import { Quote } from "../../models/Quote";
+import { http } from "../../services/Http";
+import RandomQuotes from "./RandomQuotes";
 
 interface HomePageState {
   quotes: Quote[];

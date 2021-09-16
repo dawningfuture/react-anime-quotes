@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AnimePage from "./pages/AnimePage";
-import HomePage from "./pages/HomePage";
+import AnimePage from "./pages/Anime/AnimePage";
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
   return (
